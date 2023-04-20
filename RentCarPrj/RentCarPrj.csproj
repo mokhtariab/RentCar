@@ -1,0 +1,775 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6D224998-34FD-4E17-970C-24B9F2FE7563}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RentCarPrj</RootNamespace>
+    <AssemblyName>RentCarPrj</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>1338960024_car.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.4.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v12.1.Core, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Design.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Reports.v12.1.Designer, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.1.UI, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v12.1.Design, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1.Design, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1.Extensions, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1.UI, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.1.Design, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v12.1.Design, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v12.1.Design, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v12.1.Design, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v12.1.Design, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.1.Design, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.1.Extensions, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="mCoreLib, Version=1.2.17.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="RSaEncryptionLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinShutDownStyle, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataLinq\DataClasses_Main.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses_Main.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetRentReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetRentReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ActionType\ActionList_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ActionType\ActionList_Frm.Designer.cs">
+      <DependentUpon>ActionList_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ActionType\ActionPayNE_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ActionType\ActionPayNE_Frm.designer.cs">
+      <DependentUpon>ActionPayNE_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CarForms\ActionCarList_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CarForms\ActionCarList_frm.Designer.cs">
+      <DependentUpon>ActionCarList_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CarForms\CarList_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CarForms\CarList_UC.designer.cs">
+      <DependentUpon>CarList_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CarForms\CarNE_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CarForms\CarNE_frm.designer.cs">
+      <DependentUpon>CarNE_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CarForms\CarFace_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CarForms\CarFace_frm.designer.cs">
+      <DependentUpon>CarFace_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CarForms\ActionCarNE_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CarForms\ActionCarNE_frm.designer.cs">
+      <DependentUpon>ActionCarNE_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CarRecPay\CarRecPayNE_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CarRecPay\CarRecPayNE_frm.designer.cs">
+      <DependentUpon>CarRecPayNE_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CarRecPay\CarEnterNE_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CarRecPay\CarEnterNE_frm.designer.cs">
+      <DependentUpon>CarEnterNE_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CarRecPay\CarSubRPList_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CarRecPay\CarSubRPList_frm.Designer.cs">
+      <DependentUpon>CarSubRPList_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DelList\DelCarList_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\DelList\DelCarList_UC.designer.cs">
+      <DependentUpon>DelCarList_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Duty\Certicate_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Duty\Certicate_frm.designer.cs">
+      <DependentUpon>Certicate_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Duty\DutyNE_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Duty\DutyNE_frm.designer.cs">
+      <DependentUpon>DutyNE_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm\AlarmList_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm\AlarmList_UC.designer.cs">
+      <DependentUpon>AlarmList_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm\MainRC_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm\MainRC_frm.designer.cs">
+      <DependentUpon>MainRC_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm\StartRC_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm\StartRC_frm.designer.cs">
+      <DependentUpon>StartRC_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Other\MessageRent_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Other\MessageRent_Frm.Designer.cs">
+      <DependentUpon>MessageRent_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Other\SelectPerson_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Other\SelectPerson_frm.designer.cs">
+      <DependentUpon>SelectPerson_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Persons\CustomerNE_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Persons\CustomerNE_frm.designer.cs">
+      <DependentUpon>CustomerNE_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Persons\CustomerList_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Persons\CustomerList_UC.designer.cs">
+      <DependentUpon>CustomerList_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Persons\OperatorNE_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Persons\OperatorNE_frm.designer.cs">
+      <DependentUpon>OperatorNE_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Persons\OperatorList_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Persons\OperatorList_UC.designer.cs">
+      <DependentUpon>OperatorList_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Setting\RstPass_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Setting\RstPass_frm.Designer.cs">
+      <DependentUpon>RstPass_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Setting\Setting_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Setting\Setting_frm.designer.cs">
+      <DependentUpon>Setting_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\System\AccountList_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\System\AccountList_frm.Designer.cs">
+      <DependentUpon>AccountList_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\System\AccountPayNE_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\System\AccountPayNE_frm.designer.cs">
+      <DependentUpon>AccountPayNE_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\Email\RegisterEmail_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\Email\RegisterEmail_frm.designer.cs">
+      <DependentUpon>RegisterEmail_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\Email\SendAdverAttach_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\Email\SendAdverAttach_frm.designer.cs">
+      <DependentUpon>SendAdverAttach_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\Email\SendAdverEMail_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\Email\SendAdverEMail_frm.designer.cs">
+      <DependentUpon>SendAdverEMail_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\SearchInternet_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\SearchInternet_frm.Designer.cs">
+      <DependentUpon>SearchInternet_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\SMS\ReciveSMS_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\SMS\ReciveSMS_frm.Designer.cs">
+      <DependentUpon>ReciveSMS_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\SMS\SendAdverSMS_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\SMS\SendAdverSMS_frm.Designer.cs">
+      <DependentUpon>SendAdverSMS_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\SMS\SMSLogView_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\SMS\SMSLogView_frm.Designer.cs">
+      <DependentUpon>SMSLogView_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\SMS\SMSMobSelect_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\SMS\SMSMobSelect_frm.Designer.cs">
+      <DependentUpon>SMSMobSelect_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\Tel\ListTelMob_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\Tel\ListTelMob_UC.Designer.cs">
+      <DependentUpon>ListTelMob_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\Tel\NEMobGroup_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\Tel\NEMobGroup_frm.Designer.cs">
+      <DependentUpon>NEMobGroup_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\Tel\NETelMob_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\Tel\NETelMob_frm.Designer.cs">
+      <DependentUpon>NETelMob_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\ListUser_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\ListUser_UC.Designer.cs">
+      <DependentUpon>ListUser_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\NEUser_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\NEUser_frm.Designer.cs">
+      <DependentUpon>NEUser_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\UserPermission_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\UserPermission_frm.Designer.cs">
+      <DependentUpon>UserPermission_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalClass\Function_Cls.cs" />
+    <Compile Include="GlobalClass\Global_Cls.cs" />
+    <Compile Include="GlobalClass\SMSClass.cs" />
+    <Compile Include="GlobalClass\SMS_Cls.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\Forms\EjareNameMoshtariOld.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Forms\EjareNameMoshtariOld.designer.cs">
+      <DependentUpon>EjareNameMoshtariOld.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PrintPreview\PrintPreview_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\PrintPreview\PrintPreview_frm.designer.cs">
+      <DependentUpon>PrintPreview_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PrintPreview\PrintRibbonControllerResources.Designer.cs" />
+    <Compile Include="Web References\SMSService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Report\Forms\EjareNameMoshtariOld.resx">
+      <DependentUpon>EjareNameMoshtariOld.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PrintPreview\PrintPreview_frm.resx">
+      <DependentUpon>PrintPreview_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PrintPreview\PrintRibbonControllerResources.resx" />
+    <None Include="app.config" />
+    <None Include="DataLinq\DataClasses_Main.dbml.layout">
+      <DependentUpon>DataClasses_Main.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Forms\ActionType\ActionList_Frm.resx">
+      <DependentUpon>ActionList_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ActionType\ActionPayNE_Frm.resx">
+      <DependentUpon>ActionPayNE_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CarForms\ActionCarList_frm.resx">
+      <DependentUpon>ActionCarList_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CarForms\CarList_UC.resx">
+      <DependentUpon>CarList_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CarForms\CarNE_frm.resx">
+      <DependentUpon>CarNE_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CarForms\CarFace_frm.resx">
+      <DependentUpon>CarFace_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CarForms\ActionCarNE_frm.resx">
+      <DependentUpon>ActionCarNE_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CarRecPay\CarRecPayNE_frm.resx">
+      <DependentUpon>CarRecPayNE_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CarRecPay\CarEnterNE_frm.resx">
+      <DependentUpon>CarEnterNE_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CarRecPay\CarSubRPList_frm.resx">
+      <DependentUpon>CarSubRPList_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DelList\DelCarList_UC.resx">
+      <DependentUpon>DelCarList_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Duty\Certicate_frm.resx">
+      <DependentUpon>Certicate_frm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Duty\DutyNE_frm.resx">
+      <DependentUpon>DutyNE_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm\AlarmList_UC.resx">
+      <DependentUpon>AlarmList_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm\MainRC_frm.resx">
+      <DependentUpon>MainRC_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm\StartRC_frm.resx">
+      <DependentUpon>StartRC_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Other\MessageRent_Frm.resx">
+      <DependentUpon>MessageRent_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Other\SelectPerson_frm.resx">
+      <DependentUpon>SelectPerson_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Persons\CustomerNE_frm.resx">
+      <DependentUpon>CustomerNE_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Persons\CustomerList_UC.resx">
+      <DependentUpon>CustomerList_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Persons\OperatorNE_frm.resx">
+      <DependentUpon>OperatorNE_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Persons\OperatorList_UC.resx">
+      <DependentUpon>OperatorList_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Setting\RstPass_frm.resx">
+      <DependentUpon>RstPass_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Setting\Setting_frm.resx">
+      <DependentUpon>Setting_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\System\AccountList_frm.resx">
+      <DependentUpon>AccountList_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\System\AccountPayNE_frm.resx">
+      <DependentUpon>AccountPayNE_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\Email\RegisterEmail_frm.resx">
+      <DependentUpon>RegisterEmail_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\Email\SendAdverAttach_frm.resx">
+      <DependentUpon>SendAdverAttach_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\Email\SendAdverEMail_frm.resx">
+      <DependentUpon>SendAdverEMail_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\SearchInternet_frm.resx">
+      <DependentUpon>SearchInternet_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\SMS\ReciveSMS_frm.resx">
+      <DependentUpon>ReciveSMS_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\SMS\SendAdverSMS_frm.resx">
+      <DependentUpon>SendAdverSMS_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\SMS\SMSLogView_frm.resx">
+      <DependentUpon>SMSLogView_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\SMS\SMSMobSelect_frm.resx">
+      <DependentUpon>SMSMobSelect_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\Tel\ListTelMob_UC.resx">
+      <DependentUpon>ListTelMob_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\Tel\NEMobGroup_frm.resx">
+      <DependentUpon>NEMobGroup_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\Tel\NETelMob_frm.resx">
+      <DependentUpon>NETelMob_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\ListUser_UC.resx">
+      <DependentUpon>ListUser_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\NEUser_frm.resx">
+      <DependentUpon>NEUser_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\UserPermission_frm.resx">
+      <DependentUpon>UserPermission_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Charts\OperatorChart_frm.resx">
+      <DependentUpon>OperatorChart_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Charts\OperatorRep_frm.resx">
+      <DependentUpon>OperatorRep_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Forms\AmanatNameAvalieh.resx">
+      <DependentUpon>AmanatNameAvalieh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Forms\EjareNameAvalieh.resx">
+      <DependentUpon>EjareNameAvalieh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Forms\EjareNameMoshtari.resx">
+      <DependentUpon>EjareNameMoshtari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Forms\Mamoriat.resx">
+      <DependentUpon>Mamoriat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Forms\MoshakhasatZaheri.resx">
+      <DependentUpon>MoshakhasatZaheri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Forms\Resid.resx">
+      <DependentUpon>Resid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Forms\TaahodName.resx">
+      <DependentUpon>TaahodName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Forms\TaahodNameOld.resx">
+      <DependentUpon>TaahodNameOld.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Lists\CarRepList_frm.resx">
+      <DependentUpon>CarRepList_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Charts\CarRep_frm.resx">
+      <DependentUpon>CarRep_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Charts\CarChart_frm.resx">
+      <DependentUpon>CarChart_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Lists\CustomersDutyRep_frm.resx">
+      <DependentUpon>CustomersDutyRep_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DataLinq\DataClasses_Main.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses_Main.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Report\Charts\OperatorChart_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Charts\OperatorChart_frm.designer.cs">
+      <DependentUpon>OperatorChart_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Charts\OperatorRep_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Charts\OperatorRep_frm.designer.cs">
+      <DependentUpon>OperatorRep_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Forms\AmanatNameAvalieh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Forms\AmanatNameAvalieh.designer.cs">
+      <DependentUpon>AmanatNameAvalieh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Forms\EjareNameAvalieh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Forms\EjareNameAvalieh.designer.cs">
+      <DependentUpon>EjareNameAvalieh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Forms\EjareNameMoshtari.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Forms\EjareNameMoshtari.designer.cs">
+      <DependentUpon>EjareNameMoshtari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Forms\Mamoriat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Forms\Mamoriat.designer.cs">
+      <DependentUpon>Mamoriat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Forms\MoshakhasatZaheri.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Forms\MoshakhasatZaheri.designer.cs">
+      <DependentUpon>MoshakhasatZaheri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Forms\Resid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Forms\Resid.designer.cs">
+      <DependentUpon>Resid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Forms\TaahodName.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Forms\TaahodName.designer.cs">
+      <DependentUpon>TaahodName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Forms\TaahodNameOld.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Forms\TaahodNameOld.designer.cs">
+      <DependentUpon>TaahodNameOld.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Lists\CarRepList_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Lists\CarRepList_frm.Designer.cs">
+      <DependentUpon>CarRepList_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Charts\CarRep_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Charts\CarRep_frm.designer.cs">
+      <DependentUpon>CarRep_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Charts\CarChart_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Charts\CarChart_frm.designer.cs">
+      <DependentUpon>CarChart_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Lists\CustomersDutyRep_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Lists\CustomersDutyRep_frm.designer.cs">
+      <DependentUpon>CustomersDutyRep_frm.cs</DependentUpon>
+    </Compile>
+    <None Include="Web References\SMSService\C_News1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SMSService\Messages1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SMSService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SMSService\RequestInfo1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SMSService\v2.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSetRentReport.xsc">
+      <DependentUpon>DataSetRentReport.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetRentReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetRentReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetRentReport.xss">
+      <DependentUpon>DataSetRentReport.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\stock_people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1338960024_car.ico" />
+    <None Include="Web References\SMSService\v2.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://parsasms.com/webservice/v2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SMSService\</RelPath>
+      <UpdateFromURL>http://parsasms.com/webservice/v2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>RentCarPrj_com_parsasms_v2</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
